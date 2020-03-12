@@ -8,10 +8,6 @@ import { PostModel} from '../post.model';
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent{
-// posts =[
-//   {title: 'FirstPost', content:'This is my 1st post'},
-//   {title: 'SecondPost', content:'This is my 2nd post'},
-//   {title: 'ThirdPost', content:'This is my 3rd post'},
-// ];
+
  @Input() posts:PostModel[] =[];
 }

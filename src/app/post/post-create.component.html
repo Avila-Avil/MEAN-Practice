@@ -1,21 +1,28 @@
 <h2>The Post Create Component</h2>
 <!-- <textarea rows="6" [value]="newPost" #postInput></textarea> -->
-<mat-card><!-- video13-sec1 use of form-->
-  <form  (submit)="onAddpost(postForm)" #postForm="ngForm">
+<mat-card>
+<form (submit)="onAddPost(postForm)" #postForm="ngForm">
+  <!-- video13-sec1 use of form-->
+    <mat-form-field>
+    <input
+    matInput
+    type="text"
+    name="title"
+     ngModel required>
+  </mat-form-field>
     <mat-form-field>
       <!-- video 12the-sect1 -->
-  <input matInput type="text" name="title" ngModel>
-
-    </mat-form-field>
-    <mat-form-field>
-      <!-- video 12the-sect1 -->
-      <textarea matInput rows="6" name="content"></textarea>
+      <textarea
+      matInput
+      rows="4"
+      name="content"
+      ngModel required></textarea>
     </mat-form-field>
     <button mat-raised-button
     color="primary"
-    type="submit"> Save </button>
+   type="submit"> Save </button>
   </form>
-
 </mat-card>
-<!-- <button (click)="onAddPost(postInput)">Save Button</button> -->
-<!-- <p>{{newPost}}</p> -->
+
+
+
