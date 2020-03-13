@@ -8,15 +8,17 @@
     matInput
     type="text"
     name="title"
-     ngModel required>
+     ngModel required minlength="2" placeholder ="Enter the title" #title="ngModel">
+     <mat-error *ngIf="title.invalid">Please enter title</mat-error>
   </mat-form-field>
     <mat-form-field>
       <!-- video 12the-sect1 -->
       <textarea
       matInput
       rows="4"
-      name="content"
-      ngModel required></textarea>
+      name="content" placeholder ="Enter the content"
+      ngModel required #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter Content</mat-error>
     </mat-form-field>
     <button mat-raised-button
     color="primary"

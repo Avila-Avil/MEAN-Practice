@@ -8,8 +8,8 @@ import { PostModel} from './post.model';
 export class AppComponent {
   //video 12the-sect1
   // title = 'myapp';
-  storedposts: PostModel[] = [];
-  onPostAdded(post){
-this.storedposts.push(post);
-  }
+//   storedposts: PostModel[] = [];
+//   onPostAdded(post){
+// this.storedposts.push(post);
+//   }
 }
