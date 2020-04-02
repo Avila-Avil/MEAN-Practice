@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule} from '@angular/forms';
-
+import { ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +31,7 @@ import { PostListComponent } from './post-list/post-list.component';
   imports: [
 
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MatSliderModule,
     MatInputModule,
@@ -39,7 +39,8 @@ import { PostListComponent } from './post-list/post-list.component';
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

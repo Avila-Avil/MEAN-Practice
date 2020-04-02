@@ -1,16 +1,17 @@
-<mat-accordion multi='true' *ngIf="posts.length>0">
-<mat-expansion-panel *ngFor="let postobject of posts">
-  <mat-expansion-panel-header>
-    <h4><b>Title</b></h4> &nbsp; -
-  {{postobject.title}}
-  </mat-expansion-panel-header>
-  <hr>
-  <h4><b>Details</b></h4>
- <p>{{postobject.content}}</p>
- <mat-action-row>
-   <button mat-button color="primary">EDIT</button>
-   <button mat-button color="warn">DELETE</button>
- </mat-action-row>
-</mat-expansion-panel>
+
+
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      <h4><b>Title</b></h4> &nbsp; -
+    {{post.title}}
+    </mat-expansion-panel-header>
+    <p>{{ post.content }}</p>
+    <mat-action-row>
+      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
 </mat-accordion>
-<p class="info-text mat-body-1" *ngIf="posts.length <= 0">There is no posts yet</p>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No posts added yet!</p>
+
