@@ -1,0 +1,29 @@
+<h2>User Login</h2>
+<!-- <textarea rows="6" [value]="newPost" #postInput></textarea> -->
+<mat-card>
+  <mat-progress-spinner *ngIf="isLoading"></mat-progress-spinner>
+<form (submit)="onLogin(loginform)" #loginform="ngForm" *ngIf="!isLoading">
+  <!-- video13-sec1 use of form-->
+    <mat-form-field>
+    <input
+    matInput name="email" ngModel
+    type="email" #emailInput="ngModel" required email
+     placeholder ="Enter email" >
+     <mat-error *ngIf="emailInput.invalid">Please enter  valid  mail id</mat-error>
+  </mat-form-field>
+    <mat-form-field>
+      <!-- video 12the-sect1 -->
+      <input
+    matInput name="password" ngModel required pattern
+    type="password" #passwordInput="ngModel"
+     placeholder ="Enter password" >
+      <mat-error *ngIf="passwordInput.invalid">Please enter valid password</mat-error>
+    </mat-form-field>
+    <button mat-raised-button
+    color="primary"
+   type="submit"> Login </button>
+  </form>
+</mat-card>
+
+
+

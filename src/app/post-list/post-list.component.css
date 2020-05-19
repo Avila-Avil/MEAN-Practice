@@ -2,7 +2,20 @@
   display: block;
   margin-top: 1rem;
 }
-
+mat-progress-spinner{
+  margin: auto;
+}
 .info-text{
   text-align: center;
+}
+.post-image{
+  width: 300px;
+}
+mat-paginator{
+  margin-top: 1rem;
+}
+
+.post-image img{
+  width: 300px;
+  box-shadow: 1px 1px 5px rgba(42, 16, 241, 0.5);
 }
